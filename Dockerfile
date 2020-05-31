@@ -10,4 +10,5 @@ RUN echo "/usr/sbin/httpd" >> /root/.bashrc
 
 RUN yum install php -y
 
+
 EXPOSE 80
