@@ -1,13 +1,4 @@
-FROM centos
-
-RUN yum install httpd -y
-
-COPY website/ /var/www/html
-
-RUN echo  "/rm -rf /var/run/httpd/*" >> /root/.bashrc
-
-RUN echo "/usr/sbin/httpd" >> /root/.bashrc
-
-RUN yum install php -y
-
+FROM shubham532/webserver:1
+MAINTAINER ShubhamJangid
+COPY website/  /var/www/html/
 EXPOSE 80

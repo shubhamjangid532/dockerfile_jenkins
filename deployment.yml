@@ -2,8 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myweb-deploy
+  labels: 
+    app: myweb-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
        env: production
